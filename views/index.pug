@@ -1,14 +1,18 @@
 extends layout
 
 block content
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav>
-        
+  .errors
+  form(action='api/post', method="post" name="postForm")
+    label(for="nombre") Nombre
+    input#nombre(type="text" name="nombre") 
+    label(for="autor") Autor
+    input#autor(type="text" name="autor") 
+    input(type="submit", value="Enviar")
+  table 
+    thead
+      th id
+      th Nombre
+      th Autor
+      th Opciones 
+    tbody.posts 
+  script(src="/javascripts/main.js")
